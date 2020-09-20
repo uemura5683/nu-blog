@@ -1,0 +1,136 @@
+$white: #ffffff;
+$l_gray: #fafafa;
+$gray: #e5e5e5;
+$d_gray: #666666;
+$black: #000000;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  width: 100%;
+  header {
+    width: 100%;
+    margin: 0 auto;
+    padding: .5em 0; 
+    background-color: $l_gray;
+    border-bottom: 1px solid $gray;
+     > * {
+      width: 90%;
+      margin: 0 auto;
+      display: table;
+      > * {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+      }
+      img {
+        max-width: 120px;
+      }
+      .header-right {
+        > * {
+          display: flex;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 auto;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 11px;
+    }
+  }
+}
+
+#searchform {
+  position: relative;
+  margin: 0 15px 0 0;
+  width: 30%;
+  input {
+    height: 27px;
+    margin: 10px 0;
+    line-height: 27px;
+    border: none;
+    background-color: $l_gray;
+    border-bottom: 1px solid #666666;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #search_icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: calc(50% - 15px);
+    right: 0px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      top: calc(50% - 9px);
+      left: calc(50% - 8px);
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px $d_gray;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 4px;
+      top: calc(50% + 2px);
+      left: calc(50% - 1px);
+      border-top: solid 1px #666666;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+#header_icon {
+  margin: 0 15px 0 0;
+  a {
+    height: 50px;
+    display: block;
+    i {
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    header {
+      padding: 10px 0;
+      > * {
+        width: calc( 100% - 30px );
+        margin: 0 auto;
+      }
+      .header-left {
+        width: 40%;
+      }
+      .header-right {
+        width: 100%;
+      }
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+  #searchform {
+    width: 100%;
+  }
+  #header_icon {
+    display: none;;
+  }
+}

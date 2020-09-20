@@ -1,0 +1,300 @@
+$white: #ffffff;
+$l_gray: #fafafa;
+$gray: #e5e5e5;
+$d_gray: #666666;
+$black: #000000;
+
+/*layout*/
+body {
+    opacity: 0;
+    transition: all 300ms;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 78px;
+    box-sizing: border-box;
+    animation:1s linear infinite fadeout 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes fadeout { 
+    0% { opacity: 0; } 
+    100% { opacity: 1;}
+}
+@media screen and (max-width: 767px) {
+  body {
+    padding-bottom: 92px;
+  }
+}
+
+.header + * {
+    margin-top: calc( 1rem + 1px + 56px + 1rem ) !important
+}
+.container {
+    max-width: 100% !important;
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+.main_content {
+    margin: 0 auto;
+}
+
+/*btn*/
+.btn {
+    &.btn-component {
+        width: auto;
+        border-radius: 0;
+        background-color: $white;
+        color: $d_gray;
+        border: 1px solid $d_gray;
+        text-decoration: none;
+        padding: 10px 4rem;
+        margin: 1rem 0 0;
+        &:hover, &:focus {
+            background-color: $d_gray;
+            color: $white;
+            border: 1px solid $white;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .btn {
+        &.btn-component {
+            width: calc(100% - 30px);
+        }
+    }
+}
+/*title*/
+.sub_content--title {
+    padding: 10px;
+    border: 1px solid $gray;    
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+    .sub_content--title {
+        margin: 0;
+        border-bottom: none;
+        background-color: $gray;
+        padding: 15px 10px;
+    }
+}
+
+/*コンテンツ*/
+.c-card-extend {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 15px 15px;
+    &:hover, &:focus {
+        figure {
+            a, span {
+                transform: scale(1.1);
+                opacity: .7;
+            }
+        }
+    }
+    figure {
+        margin-bottom: 15px;
+        overflow: hidden;
+        border: 1px solid #e5e5e5;
+        a, span {
+            background-position: center center;
+            background-size: cover;
+            display: block;
+            overflow: hidden;
+            padding-top: 70%;
+            width: 100%;
+            transition: .7s;
+        }
+    }
+    .c-post-content {
+        text-align: left;
+        > * {
+        display: block;
+        margin: 0 0 .5rem;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    .c-post-info-date {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $white;
+        text-align: left;
+        background: $d_gray;
+        padding: 4px 8px;
+        display: inline-block;
+    }
+  }
+}
+.card-title {
+    margin-bottom: 0.75rem;
+    padding: 10px 15px 10px;
+    font-size: 1.5rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid #333333;
+    font-weight: bold;
+    .card-subtitle {
+        display: block;
+        font-size: 1.0rem;
+        margin: .5rem 0 0;
+        font-weight: normal;
+    }
+}
+@media screen and (max-width: 767px) {
+    .c-card-extend {
+        &:nth-child( 2n - 1 ) {
+            padding: 0 5px 15px 15px;
+        }
+        &:nth-child( 2n - 2 ) {
+            padding: 0 15px 15px 5px;
+        }
+    }
+    .card-title {
+        font-size: 1.2rem;
+        .card-subtitle {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+/* form */
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+textarea {
+    width: 100%;
+}
+button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="submit"].btn-primary, input[type="submit"].btn-back, span.btn-primary, span.btn-back {
+    width: 230px;
+}
+button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
+    text-decoration: none;
+    background-color: $d_gray;
+    color: $white;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+        -ms-border-radius: 0;
+    border-color: $d_gray;
+    &:hover, &:focus {
+        color: $d_gray;
+        background-color: $white;
+        border-color: $d_gray;
+    }
+}
+.btn-back {
+    text-decoration: none;
+    background-color: $white;
+    color: $d_gray;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+        -ms-border-radius: 0;
+    border-color: $d_gray;
+    opacity: .7;
+    &:hover, &:focus {
+        color: $d_gray;
+        opacity: .4;
+    }  
+}
+.form-actions {
+    padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="submit"].btn-primary, input[type="submit"].btn-back, span.btn-primary, span.btn-back {
+    width: 100%;
+  }
+  .form-actions {
+    padding: 10px 0;
+    > * {
+      margin: 0 0 1rem;
+      &:last-child {
+        margin: 0;         
+      }
+    }
+  }
+}
+
+/* lead */
+.lead {
+    margin: 0 0 1rem;
+    > * {
+        line-height: 1.6;
+    }
+}
+
+/* error */
+.alert-warning {
+  background-color: $l_gray;
+  color: $d_gray;
+  border: 1px solid $d_gray;
+}
+
+.alert-success {
+    background-color: $d_gray;
+    color: $l_gray;
+    border: 1px solid $l_gray; 
+}
+
+/* search */
+.o-sort-pulldown {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  border-bottom: 1px solid $gray;
+  background-color: $l_gray;
+  border-top: 1px solid $gray;
+  padding: 1rem;
+  margin: 0 15px 1rem;
+  .o-sort-select {
+    width: auto;
+    margin: 0 1rem 0 0;
+    form {
+      font-size: 0;
+      label {
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: middle;
+        margin: 0 .5rem 0 0;
+      }
+      select {
+        margin: 0;
+        width: auto;
+        font-size: 1rem;
+        min-width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .o-sort-pulldown {
+        margin: 0 0 1rem;
+        .o-sort-select {
+            width: 100%;
+            margin: 0 0 1rem;
+            form {
+                label {
+                    width: 30%;
+                    text-align: left;
+                    margin: 0;
+                }
+                select {
+                    width: 70%;
+                    min-width: none;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
