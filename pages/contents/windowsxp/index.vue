@@ -12,6 +12,7 @@
               <option value="/profile/">Profile</option>
               <option value="/contact/">Contact</option>
               <option value="https://twitter.com/uemuragame5683" target="_blank">SNS</option>
+              <option value="https://uemu-engineer.com/" target="_blank">Nu Stack</option>
             </select>
         </div>
       </div>

@@ -189,6 +189,9 @@ nav {
           &:nth-of-type(5) {
             animation: slideNav .3s ease-out .4s normal forwards;
           }
+          &:nth-of-type(6) {
+            animation: slideNav .3s ease-out .45s normal forwards;
+          }
         }
       }
     }

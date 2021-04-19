@@ -13,6 +13,7 @@
           <li><a href="/profile/">Profile</a></li>
           <li><a href="/contact/">Contact</a></li>
           <li><a href="https://twitter.com/uemuragame5683" target="_blank">SNS</a></li>
+          <li><a href="https://uemu-engineer.com/" target="_blank">Nu Stack</a></li>
       </ul>
   </nav>
 </template>

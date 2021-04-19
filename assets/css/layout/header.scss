@@ -96,14 +96,21 @@ $black: #000000;
   }
 }
 
-#header_icon {
+div[id*=header_icon] {
   margin: 0 15px 0 0;
   a {
     height: 50px;
     display: block;
+    line-height: 50px;
     i {
       font-size: 32px;
       line-height: 50px;
+    }
+    img {
+      height: 22px;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 0 3px;
     }
   }
 }
@@ -130,7 +137,7 @@ $black: #000000;
   #searchform {
     width: 100%;
   }
-  #header_icon {
+  div[id*=header_icon] {
     display: none;;
   }
 }
