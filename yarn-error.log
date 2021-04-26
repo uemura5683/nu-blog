@@ -1,20 +1,20 @@
 Arguments: 
-  /usr/local/Cellar/node/12.1.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js add --dev @nuxtjs/google-analytics
+  /Users/uemura/.nodebrew/node/v15.14.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js install
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
+  /Users/uemura/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/uemura/.nodebrew/current/bin
 
 Yarn version: 
   1.15.2
 
 Node version: 
-  12.1.0
+  15.14.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  SyntaxError: Invalid value type 1480:20 in /Applications/MAMP/htdocs/Imple/vue_cms/yarn.lock
+  SyntaxError: Invalid value type 1480:20 in /Applications/MAMP/htdocs/nu-blog/yarn.lock
       at Parser.unexpected (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:63184:11)
       at Parser.parse (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:63312:16)
       at parse (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:63386:17)
@@ -51,6 +51,7 @@ npm manifest:
       "vue-property-decorator": "^8.4.2"
     },
     "devDependencies": {
+      "@nuxtjs/google-analytics": "^2.2.3",
       "@types/axios": "^0.14.0",
       "html-loader": "^1.1.0",
       "ts-loader": "^7.0.1",
