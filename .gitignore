@@ -1,0 +1,4 @@
+yarn-error.log
+.nuxt/*
+node_modules/*
+dist/*
