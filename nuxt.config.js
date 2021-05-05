@@ -71,7 +71,7 @@ export default {
   * google analytics
   **/
   googleAnalytics: {
-    id: 'UA-165433320-1'
+    id: 'UA-XXXXXXXXXX-1'
   },
   /*
   ** Build configuration
