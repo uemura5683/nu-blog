@@ -1046,6 +1046,14 @@
     "consola" "^2.11.3"
     "defu" "^2.0.2"
 
+"@nuxtjs/dotenv@^1.4.1":
+  "integrity" "sha512-DpdObsvRwC8d89I9mzz6pBg6e/PEXHazDM57DOI1mmML2ZjHfQ/DvkjlSzUL7T+TnW3b/a4Ks5wQx08DqFBmeQ=="
+  "resolved" "https://registry.npmjs.org/@nuxtjs/dotenv/-/dotenv-1.4.1.tgz"
+  "version" "1.4.1"
+  dependencies:
+    "consola" "^2.10.1"
+    "dotenv" "^8.1.0"
+
 "@nuxtjs/google-analytics@^2.2.3":
   "integrity" "sha512-dPwgsRNECtZqHdmnbJRFy3T4DDVakrpeN7vM1DwAIV1FXYlIBMKvdi8nt1v8TPU4IZdaoXrQodfeNMCooPo/7g=="
   "resolved" "https://registry.npmjs.org/@nuxtjs/google-analytics/-/google-analytics-2.2.3.tgz"
@@ -3060,7 +3068,7 @@
   dependencies:
     "is-obj" "^1.0.0"
 
-"dotenv@^8.2.0":
+"dotenv@^8.1.0", "dotenv@^8.2.0":
   "integrity" "sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw=="
   "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-8.2.0.tgz"
   "version" "8.2.0"

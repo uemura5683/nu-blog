@@ -21,7 +21,7 @@ if (process.browser) {
       news_page_flag        = news_page != null ? true : false,
       news_detail_page_flag = news_detail_page != null ? true : false,
       profile_page_flag     = profile_page != null ? true : false,
-      ApiKey                = 'a9ca1ec4-edff-43d8-ace7-e5f0c68b5b50';
+      ApiKey                = process.env.API_KEY;
 
    // スクロールトップ
    let scrollTo = function ( dom, to, duration ) {

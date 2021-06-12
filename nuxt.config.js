@@ -1,9 +1,15 @@
 
+require('dotenv').config();
+const { API_KEY, GOOGLE_ANALYTICS_ID } = process.env;
 export default {
   server: {
     port: 3001, // デフォルト: 3000
     host: '0.0.0.0', // デフォルト: localhost,
     timing: false
+  },
+  env: {
+    API_KEY,
+    GOOGLE_ANALYTICS_ID
   },
   mode: 'universal',
   /*
@@ -71,7 +77,12 @@ export default {
   * google analytics
   **/
   googleAnalytics: {
-    id: 'UA-XXXXXXXXXX-1'
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   },
   /*
   ** Build configuration
