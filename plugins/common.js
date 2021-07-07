@@ -163,92 +163,6 @@ if (process.browser) {
     }
   }
 
-  // モールトップページ
-  if( top_page_flag ) {
-    let top_main_banner       = document.getElementById("main_banner"),
-        top_news_banner       = document.getElementById("news"),
-        top_profile_banner    = document.getElementById("profile");
-
-    let top_link_judge = function( urls, image, alt ) {
-      let img_link = null;
-      if( urls != undefined ) {
-        img_link = '<a href="' + urls + '"><img src="' + image +'" alt="' + alt + '"></a>';
-      } else {
-        img_link = '<img src="' + image +'" alt="' + alt + '">';
-      }
-      return img_link;
-    }
-
-    let top_link_judge_type2 = function( link ,image, alt ) {
-      let img_link_type2 = null;
-      img_link_type2 = '<a href="' + link + '" style="background-image:url(' + image + ')" alt="' + alt + '"></a>';
-      return img_link_type2;
-    }
-
-    let top_blog_content = function( jsondata, eng, param ) {
-      // プログラミングコンテンツを表示
-      let top_new_html = '<h2 class="card-title">' + eng + '</h2>';
-          top_new_html += '<ul class="row-cols-2 row-cols-lg-3">';
-          jsondata.forEach( news_element => {
-            let link_url = null;
-            if( news_element.link != undefined ) link_url = news_element.link;
-            else link_url = '/blog/' + param +'/detail?date_id=' + news_element.id;
-            top_new_html += '<li class="c-card-extend">';
-            top_new_html += '<figure>' + top_link_judge_type2( link_url, news_element.image.url, news_element.title ) + '</figure>';
-            top_new_html += '<p class="c-post-content"><span class="c-post-info-date">' +  date_change( news_element.date ) +  '</span><span class="c-post-info-title">' +  news_element.title +  '</span></p>';
-            top_new_html += '</li>';
-          });
-          top_new_html += '</ul>';
-      return top_new_html; 
-    }
-
-    fetch("https://uemura5683.microcms.io/api/v1/top", {
-            headers: {
-              "X-API-KEY": ApiKey
-            }
-          })
-          .then(res => res.json())
-          .then(json => {
-
-              // メインビジュアルを表示
-              let top_html = '<section class="carousel" aria-label="Gallery"><ol class="carousel__viewport">';
-                  if( json.main_image1 != undefined ) {
-                    top_html += '<li id="carousel__slide1" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image1_link, json.main_image1.url, json.main_image1_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide3" class="carousel__prev">prev</a><a href="#carousel__slide2" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  if( json.main_image2 != undefined ) {
-                    top_html += '<li id="carousel__slide2" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image2_link, json.main_image2.url, json.main_image2_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide1" class="carousel__prev">prev</a><a href="#carousel__slide3" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  if( json.main_image3 != undefined ) {
-                    top_html += '<li id="carousel__slide3" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image3_link, json.main_image3.url, json.main_image3_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide2" class="carousel__prev">prev</a><a href="#carousel__slide1" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  top_html += '</ol></section>';
-                  top_main_banner.innerHTML = top_html;
-
-              let top_new_html = '<div class="top_content_inner"><div class="top_content_inner text-center">';
-
-                  if( json.top_portfolio.length > 0 ) {
-                    top_new_html += top_blog_content( json.top_portfolio, 'Portfolio', 'portfolop' ); // ポートフォリオコンテンツを表示
-                  }
-                  if( json.top_business.length > 0 ) {
-                    top_new_html += top_blog_content( json.top_business, 'Business',  'business' ); // ビジネスコンテンツを表示
-                  }
-                  if( json.top_life.length > 0 ) {
-                    top_new_html += top_blog_content( json.top_life, 'Life', 'life' ); // ライフンテンツを表示
-                  }
-                  top_new_html += '</div></div>';
-                  top_news_banner.innerHTML = top_new_html; 
-    } );
-  }
-
   // ニュース一覧・ニュース詳細ページ
   if( news_page_flag || news_detail_page_flag ) {
     let suffix  = location.pathname.slice( -1 ),
@@ -297,36 +211,6 @@ if (process.browser) {
     } else {
       var blogapi = "https://uemura5683.microcms.io/api/v1/" + cmspath;
     }
-
-    // function changelimit( obj ) {
-    //   var params = location.href;
-    //   function getParams(params){
-    //     let regex = /[?&]([^=#]+)=([^&#]*)/g;
-    //     let params_obj = {};
-    //     let match;
-    //     while(match = regex.exec(params)){
-    //       params_obj[match[1]] = match[2];
-    //     }
-    //     return params_obj;
-    //   }
-    //   console.log(getParams(params));
-    // }
-    // limitsegment.addEventListener( 'change', changelimit, false );
-
-    // function changesort( obj ) {
-    //   var params = location.href;
-    //   function getParams(params){
-    //     let regex = /[?&]([^=#]+)=([^&#]*)/g;
-    //     let params_obj = {};
-    //     let match;
-    //     while(match = regex.exec(params)){
-    //       params_obj[match[1]] = match[2];
-    //     }
-    //     return params_obj;
-    //   }
-    //   console.log(getParams(params));      
-    // }
-    // sortsegment.addEventListener( 'change', changesort, false );
 
     fetch( blogapi, {
       headers: {
@@ -383,24 +267,4 @@ if (process.browser) {
     } );
   }
 
-  // プロフィールページ
-  if( profile_page_flag ) {
-    fetch("https://uemura5683.microcms.io/api/v1/blog", {
-        headers: {
-          "X-API-KEY": ApiKey
-        }
-      })
-      .then(res => res.json())
-      .then(json => {
-          document.getElementById("title").innerHTML = "<h2>" + json.title + "</h2>";
-          document.getElementById("img").innerHTML = "<img src='" + json.image.url + "' alt='" + json.title + "'>";
-          document.getElementById("description").innerHTML = json.description;
-          document.getElementById("adobe").innerHTML = "<h3>" + json.skill[0].title + "</h3><div class='skill_detail'>" + json.skill[0].html + "</div>";
-          document.getElementById("programing").innerHTML = "<h3>" + json.skill[1].title + "</h3><div class='skill_detail'>" + json.skill[1].html + "</div>";
-          document.getElementById("cms").innerHTML = "<h3>" + json.skill[2].title + "</h3><div class='skill_detail'>" + json.skill[2].html + "</div>";
-          document.getElementById("business").innerHTML = "<h3>" + json.skill[3].title + "</h3><div class='skill_detail'>" + json.skill[3].html + "</div>";
-          document.getElementById("studynow").innerHTML = "<h3>" + json.skill[4].title + "</h3><div class='skill_detail'>" + json.skill[4].html + "</div>";
-          console.log(json.skill);  
-        } );
-  }
 }

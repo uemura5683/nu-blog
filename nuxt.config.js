@@ -53,9 +53,7 @@ export default {
     '@/assets/css/layout/footer.scss',
     '@/assets/css/component/nav.scss',
     '@/assets/css/component/part.scss',
-    '@/assets/css/page/main.scss',
     '@/assets/css/page/news.scss',
-    '@/assets/css/page/profile.scss',
     '@/assets/css/page/inquiry.scss'
   ],
   /*
