@@ -56,7 +56,6 @@
           headers: { 'X-API-KEY': process.env.API_KEY }
         }
       )
-      console.log(data);
       return {
         business: data
       }

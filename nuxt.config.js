@@ -59,6 +59,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
+  router: {
+    middleware: 'redirect'
+  },
   plugins: [
     { src: '~/plugins/both-sides.js' },
     { src: '~/plugins/common.js', mode: 'client' }
@@ -69,7 +72,7 @@ export default {
   modules: [
     // パッケージの名前を使用する
     '@nuxtjs/axios',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
   ],
   /*
   * google analytics

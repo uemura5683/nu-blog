@@ -50,7 +50,7 @@
                       <li class="c-card-extend" v-for="blog in top.top_business" :key="blog.id">
                         <figure>
                           <nuxt-link 
-                              :to="`/blog/${blog.id}`"
+                              :to="`/blog/business/${blog.id}`"
                               :style="{ 'background-image': 'url(' + blog.image.url + ')' }"
                               :alt="blog.title">
                           </nuxt-link>

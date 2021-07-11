@@ -5,23 +5,12 @@ if (process.browser) {
       headers               = document.getElementsByClassName( 'header' ),
       footers               = document.getElementsByClassName( 'footer' ),
       overlay               = document.getElementsByClassName( 'overlay' ),
-      scrollTop             = 0, 
       top_page              = document.getElementById( 'top-page' ),
-      news_page             = document.getElementById( 'news-list-page' ),
-      news_detail_page      = document.getElementById( 'news-detail-page' ),
-      profile_page          = document.getElementById( 'profile-page' ),
-      contact_page          = document.getElementById( 'inquiry-page' ),
       search_form           = document.getElementById( 'searchform' ),
       search_input          = document.getElementById( 'search_input' ),      
       search_btn            = document.getElementById( 'search_icon' ),
-      limitsegment          = document.getElementById( 'limit' ),
-      sortsegment           = document.getElementById( 'sort' ),
       top_animation_bg      = document.getElementById( 'animaton_bg' ),
-      top_page_flag         = top_page != null ? true : false,
-      news_page_flag        = news_page != null ? true : false,
-      news_detail_page_flag = news_detail_page != null ? true : false,
-      profile_page_flag     = profile_page != null ? true : false,
-      ApiKey                = process.env.API_KEY;
+      top_page_flag         = top_page != null ? true : false;
 
    // スクロールトップ
    let scrollTo = function ( dom, to, duration ) {
@@ -71,19 +60,9 @@ if (process.browser) {
   // 検索キーワード
   if( search_form || search_btn ) {
     let search_event = function ( event ) {
-      let suffix  = location.pathname.slice( -1 ),
-          targets  = suffix.indexOf('/') != -1
-                          ? news_detail_page_flag
-                                  ? location.pathname.slice( 0, -8 ).split('/').pop()
-                                  : location.pathname.slice( 0, -1 ).split('/').pop()
-                          : news_detail_page_flag
-                                  ? location.pathname.slice( 0, -7 ).split('/').pop()
-                                  : location.pathname.split('/').pop(),
-          searchpath = null,
-          searchparams = search_input.value;
+      let searchparams = search_input.value;
           location.href = '/search/' + searchparams;      
     }
-
     let search = function ( event ) {
       search_event();
     }
@@ -124,9 +103,6 @@ if (process.browser) {
           var paramValue = decodeURIComponent(element[1]);
       
           queryObject[paramName] = paramValue;
-        }
-        if( paramName == 'keyword' ) {
-          search_input.value = paramValue;
         }
       }
     }
