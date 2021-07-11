@@ -41,10 +41,7 @@
           </section>
         </div>
         <div id="main_content">
-          <div class="l-side">
-            <l-menu />
-          </div>
-          <div class="main_content l-main">
+          <div class="main_content">
             <div id="news">
               <div class="top_content_inner">
                 <div class="top_content_inner text-center">
