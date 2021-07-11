@@ -23,7 +23,7 @@
                     </li>
                 </ul>
                 <div v-else>
-                    検索結果見つかりませんでした
+                    見つかりませんでした
                 </div>
             </div>
           </div>
@@ -47,8 +47,10 @@
             return moment(date).format('YYYY/MM/DD HH:mm');
         }
     },
-    data: {
-      posts: []
+    data() {
+      return {
+        posts: []
+      }
     },
     async asyncData({ params }) {
       const target = encodeURI(params.id);

@@ -52,8 +52,10 @@
             return moment(date).format('YYYY/MM/DD HH:mm');
         }
     },
-    data: {
-      posts: []
+    data() {
+      return {
+        posts: []
+      }
     },
     async asyncData({ params }) {
       const { data } = await axios.get(
