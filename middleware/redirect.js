@@ -6,7 +6,7 @@ export default function ({ route, redirect }) {
           , param     = params.split('=')
           , target    = param[param.length -1]
           , routepath = route.path
-          , replace   = routepath.replace( '/detail', '' );
+          , replace   = routepath.replace( '/detail/', '' );
 
       const redirectUrl = replace + '/' + target
       return redirect(301, redirectUrl)
