@@ -1,34 +1,29 @@
 <template>
-  <div id="news-detail-page" class="container">
+  <div id="news-detail-page">
     <main> 
-      <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
-        <div class="main_content col-md-10 p-0">
-          <div id="news-content-list">
-            <div class="news-detail-inner">
-              <div class="news-top-content">
-                <div class="c-post-info-top">
-                  <h2 class="c-post-info-title">{{life.title}}</h2>
-                  <p class="c-post-content">
-                    <span class="c-post-info-date">{{life.date | moment('LTS')}}</span>
-                  </p>
-                </div>
-                <figure>
-                  <span class="figure_img" :style="{ 'background-image': 'url(' + life.image.url + ')' }"></span>
-                </figure>
-              </div>
-              <div class="dom-content">
-                <div v-if="life.body" v-html="life.body" class="dom-content-inner"></div>
-                <div v-if="life.body2" v-html="life.body2" class="dom-content-inner"></div>
-                <div v-if="life.body3" v-html="life.body3" class="dom-content-inner"></div>
-              </div>
+      <div class="container">
+        <div class="news-detail-inner">
+          <div class="news-top-content">
+            <div class="c-post-info-top">
+              <h2 class="c-post-info-title">{{life.title}}</h2>
+              <p class="c-post-content">
+                <span class="c-post-info-date">{{life.date | moment('LTS')}}</span>
+              </p>
             </div>
+            <figure>
+              <span class="figure_img" :style="{ 'background-image': 'url(' + life.image.url + ')' }"></span>
+            </figure>
+          </div>
+          <div class="dom-content">
+            <div v-if="life.body" v-html="life.body" class="dom-content-inner"></div>
+            <div v-if="life.body2" v-html="life.body2" class="dom-content-inner"></div>
+            <div v-if="life.body3" v-html="life.body3" class="dom-content-inner"></div>
           </div>
         </div>
       </div>
     </main>
   </div>
 </template>
-
 <script>
   import axios from 'axios';
   import moment from "moment";

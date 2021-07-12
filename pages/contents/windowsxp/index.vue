@@ -16,7 +16,7 @@
             </select>
         </div>
       </div>
-      <div id="main_content" class="container d-block d-md-flex mt-3 p-0">
+      <div class="container d-block d-md-flex mt-3 p-0">
         <div class="main_content col-md-12 p-0">
             <div class="window">
               <div class="title-bar">

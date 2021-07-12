@@ -44,9 +44,9 @@
           <div class="main_content">
             <div id="news">
               <div class="top_content_inner">
-                <div class="top_content_inner text-center">
+                <div class="top_content_inner txt-center">
                     <h2 class="card-title"><span>Blog</span></h2>
-                    <ul class="c-card-wrap row-cols-2 row-cols-lg-3">
+                    <ul class="c-card-content">
                       <li class="c-card-extend" v-for="blog in top.top_business" :key="blog.id">
                         <figure>
                           <nuxt-link 
@@ -62,7 +62,7 @@
                       </li>
                     </ul>
                     <h2 class="card-title"><span>Portfolio</span></h2>
-                    <ul class="c-card-wrap row-cols-2 row-cols-lg-3">
+                    <ul class="c-card-content"">
                       <li class="c-card-extend" v-for="portfolio in top.top_portfolio" :key="portfolio.id">
                         <figure>
                           <a
@@ -94,7 +94,6 @@
     </main>
   </div>
 </template>
-
 
 <script>
 import axios from 'axios';

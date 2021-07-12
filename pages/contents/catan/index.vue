@@ -1,7 +1,7 @@
 <template>
   <div id="news-detail-page" class="container mt-4 p-0">
     <main> 
-      <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
+      <div class="container">
           <div class="main_content col-md-10  p-0">
             <div id="news-content-list">
               <div class="news-detail-inner">
