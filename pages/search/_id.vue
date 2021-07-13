@@ -20,8 +20,8 @@
                   </p>
               </li>
             </ul>
-            <div v-else>
-                見つかりませんでした
+            <div v-else class="not-found">
+                検索結果、見つかりませんでした
             </div>
         </div>
       </div>

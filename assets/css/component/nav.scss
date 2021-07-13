@@ -1,8 +1,4 @@
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000;
 
 #menu {
   justify-content: flex-end;
@@ -24,8 +20,6 @@ $black: #000000;
         background-color: $d_gray;
         transition: 0.2s all ease;
         -webkit-transition: 0.2s all ease;
-        -moz-transition: 0.2s all ease;
-        -ms-transition: 0.2s all ease;      
       &:nth-of-type(1) {
         top: 15px;
       }
@@ -45,20 +39,16 @@ body.active {
       span {
         &:nth-of-type(1) {
           top: 23px;
-          transform: rotate(45deg);
           -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
         }
         &:nth-of-type(2) {
           opacity: 0;
         }
         &:nth-of-type(3) {
           top: 23px;
-          transform: rotate(-45deg);
           -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
         }
       }    
     }
@@ -80,19 +70,18 @@ nav {
   z-index: 7000;
   max-width: 265px;
   margin-right: -265px;
-  padding-top: calc( 1rem + 56px);
-  transition: margin 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding-top: calc( 1rem + 62px);
   -webkit-transition: margin 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-    > ul {
+          transition: margin 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  > ul {
       width: 264px;
       margin: 0 auto;
       display: flex;
       -webkit-box-pack: center;
+          -ms-flex-pack: center;      
       -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+              justify-content: center;
       flex-wrap: wrap;
-      -webkit-flex-weap: wrap;
       > li {
         width: 100%;
         text-align: center;
@@ -103,7 +92,7 @@ nav {
         a, label {
           display: block;
           text-decoration: none;
-          font-size: 18px;
+          font-size: 1.8rem;
           padding: 15px 10px;
           position: relative;
           &:hover, &:focus {
@@ -145,7 +134,7 @@ nav {
                 overflow: hidden;
                 li {
                   opacity: 1;
-                  right: 0%;
+                  right: 0;
                   top: 0;
                 }
               }
@@ -157,12 +146,15 @@ nav {
   }
   @media screen and (max-width: 767px) {
     nav {
-      transition: margin 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+              transition: margin 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
       -webkit-transition: margin 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
       ul {
         justify-content: flex-start;
         width: 100%;
         li {
+          input[type="checkbox"]:checked + label + ul {
+            height: 100px;
+          }
           a, span {
             font-size: 1.2em;
           }

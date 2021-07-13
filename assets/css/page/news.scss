@@ -1,8 +1,4 @@
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000;
 
 #news-detail-page {
   margin: 1rem 0;
@@ -12,20 +8,18 @@ $black: #000000;
       flex-wrap: wrap;
       align-items: center;
       border: 1px solid $d_gray;
-      padding: 1rem;
+      padding: 2rem;
       .c-post-info-top {
         width: calc(50% - .5rem);
         padding: 0 .5rem 0 0;
         .c-post-info-title {
-          font-size: 1.4rem;
-          line-height: 1.8rem;
           margin: 0 0 0;
           border-bottom: 1px solid $d_gray;
           padding: 0 0 1rem;
         }
         .c-post-content {
           padding: 10px 0;
-          font-size: 14px;
+          font-size: 1.4rem;
           margin: 2rem 0 0;
           > * {
             margin-right: 10px;
@@ -54,9 +48,10 @@ $black: #000000;
   .dom-content {
     margin: 1rem 0 0;
     border: 1px solid $d_gray;
-    padding: 1rem;
+    padding: 2rem;
     .dom-content-inner {
       margin-bottom: 2rem;
+      word-break: break-all;
       img {
         width: 50%;
         border: 1px solid $d_gray;
@@ -65,21 +60,13 @@ $black: #000000;
     h2, h3 {
       margin: 0 0 1rem;
       font-weight: bold;
-      line-height: 1.6;
     }
     h2 {
       border-bottom: 1px solid $d_gray;
-      font-size: 1.6rem;
-      line-height: 1.6;
       padding: .5rem 0;
     }
     h3 {
       margin: 1.5rem 0;
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.8;
     }
     strong {
       font-weight: bold;
@@ -108,8 +95,6 @@ $black: #000000;
             padding: 0 0 .5rem;              
           }
           .c-post-info-title {
-            font-size: 1.1rem;
-            line-height: 1.4rem;
             padding: 0 0 .5rem;
           }
         }
@@ -121,22 +106,13 @@ $black: #000000;
     }
     .dom-content {
       h2, h3{
-        font-size: 1.2rem;
-        line-height: 1.6;
         margin: 1rem 0;
-      }
-      pre {
-        font-size: .8rem;
       }
       .dom-content-inner {
         width: 100%;
         margin-bottom: 1rem;
         img {
           width: 100%;
-        }
-        p {
-          font-size: .8rem;
-          line-height: 1.6;
         }
         &:last-child {
           margin-bottom: 0rem;

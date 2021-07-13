@@ -123,8 +123,9 @@ $fs-max: 100;
                 #title {
                     width: 50%;
                     margin: 0;
+                    font-size: 2.4rem;
                     h2 {
-                        font-size: 18px;  
+                        font-size: 1.8rem;  
                         padding: 10px 0;
                         border-bottom: 1px solid $d_gray;
                         width: 100%;
@@ -145,17 +146,14 @@ $fs-max: 100;
             }
             #description, #adobe, #programing, #cms, #business, #business, #studynow {
                 h2, h3 {
-                    font-size: 1.2rem;
-                    padding: 10px 0px;
-                    margin: 10px auto;
+                    padding: 1.0rem 0px;
+                    margin: 1.0rem auto;
                     border-bottom: 1px solid $d_gray;
                     width: 25%;
                 }
                 .skill_detail, p {
                     margin: 1rem 0 1rem 1.5rem;
                     width: calc( 75% - 1.5rem );
-                    font-size: 1.2rem;
-                    line-height: 1.6;
                 }
                 .skill_detail {
                     ul {
@@ -163,8 +161,6 @@ $fs-max: 100;
                         flex-wrap: wrap;
                         li {
                             margin: 1rem 0;
-                            font-size: 1.2rem;
-                            line-height: 1.6;
                             width: 47.5%;
                             &:nth-of-type( 2n - 1 ) {
                                 margin: 1rem 5% 1rem 0;

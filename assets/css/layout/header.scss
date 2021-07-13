@@ -1,8 +1,4 @@
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000;
 
 .header {
   position: sticky;
@@ -39,13 +35,9 @@ $black: #000000;
     a {
       text-decoration: none;
     }
-    h1 {
-      font-size: 28px;
-      margin: 0 auto;
-    }
     p {
-      line-height: 1.5;
-      font-size: 11px;
+      line-height: 1.6;
+      font-size: 1.1rem;
     }
   }
 }
@@ -103,7 +95,7 @@ div[id*=header_icon] {
     display: block;
     line-height: 50px;
     i {
-      font-size: 32px;
+      font-size: 3.2rem;
       line-height: 50px;
     }
     img {

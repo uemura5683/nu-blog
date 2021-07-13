@@ -22,7 +22,7 @@
           </div>
         </div>
     </div>
-    <div class="form-actions text-center button-submit">
+    <div class="form-actions txt-center button-submit">
       <button type="submit" class="btn btn-primary" >
         送信する
       </button>

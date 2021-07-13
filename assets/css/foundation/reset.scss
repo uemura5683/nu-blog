@@ -17,7 +17,6 @@ figure, footer, header, menu, nav, section, mark, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -25,9 +24,22 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+  font-size: 62.5%;
+}
 body {
-  line-height: 1;
   font-family: 'Open Sans', sans-serif;
+  background-color: $white;
+  color: $d_gray;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.4rem;
 }
 ol, ul {
 	list-style: none;
@@ -45,39 +57,29 @@ table {
 	border-spacing: 0;
 }
 p, li {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 img {
   width: 100%;
 }
 a, span {
-  color:#666;
+  color: $d_gray;
 }
 a {
   text-decoration: underline;
   &:hover, &:focus {
     text-decoration: none;
-    color: #666;
+    color: $d_gray;
   }
 }
-body {
-  background-color: $white;
-  color: #666;
-}
-
-// form
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   margin: 0;
   font-size: 100%;
   vertical-align: middle;
 }
 
-button,
-input {
+button, input {
   *overflow: visible;
   line-height: normal;
 }
@@ -88,28 +90,16 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
+button, input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
 }
 
-label,
-select,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-input[type="radio"],
-input[type="checkbox"] {
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
   cursor: pointer;
 }
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-appearance: textfield;
 }
@@ -125,9 +115,9 @@ textarea {
 }
 
 label, input, button, select, textarea {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 1.6;
 }
 
 input, button, select, textarea {
@@ -146,12 +136,11 @@ input[type="text"], input[type="email"], input[type="search"] {
   height: 20px;
   padding: 4px 6px;
   margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: #555555;
   vertical-align: middle;
   -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
           border-radius: 4px;
 }
 
@@ -163,55 +152,35 @@ textarea {
   height: auto;
 }
 
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="search"],
-.uneditable-input {
+textarea, input[type="text"], input[type="email"], input[type="search"] {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
           transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-.uneditable-input:focus {
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
   outline: thin dotted \9;
-  /* IE6-9 */
-
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type="radio"], input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   *margin-top: 0;
   line-height: normal;
 }
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="radio"],
-input[type="checkbox"] {
+input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
   width: auto;
 }
 
-select,
-input[type="file"] {
+select, input[type="file"] {
   height: 30px;
   *margin-top: 4px;
   line-height: 30px;
@@ -228,28 +197,17 @@ select[size] {
   height: auto;
 }
 
-select:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #999999;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #999999;
-}
-
+input:placeholder,
+textarea:-moz-placeholder,
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #999999;
+  color: $d_gray;
 }
 
 .radio, .checkbox {
@@ -286,55 +244,46 @@ textarea {
   margin-left: 0;
 }
 
-input[disabled],
-select[disabled],
-textarea[disabled],
-input[readonly],
-select[readonly],
-textarea[readonly] {
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
   cursor: not-allowed;
   background-color: #eeeeee;
 }
 
-input[type="radio"][disabled],
-input[type="checkbox"][disabled],
-input[type="radio"][readonly],
-input[type="checkbox"][readonly] {
+input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="radio"][readonly], input[type="checkbox"][readonly] {
   background-color: transparent;
 }
 
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
   width: 100%;
 }
 
-button.btn,
-input[type="submit"].btn {
+button.btn, input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px;
 }
 
-button.btn::-moz-focus-inner,
-input[type="submit"].btn::-moz-focus-inner {
+button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-button.btn.btn-large,
-input[type="submit"].btn.btn-large {
+button.btn.btn-large, input[type="submit"].btn.btn-large {
   *padding-top: 7px;
   *padding-bottom: 7px;
 }
 
-button.btn.btn-small,
-input[type="submit"].btn.btn-small {
+button.btn.btn-small, input[type="submit"].btn.btn-small {
   *padding-top: 3px;
   *padding-bottom: 3px;
 }
 
-button.btn.btn-mini,
-input[type="submit"].btn.btn-mini {
+button.btn.btn-mini, input[type="submit"].btn.btn-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
 }

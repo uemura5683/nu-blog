@@ -20,8 +20,8 @@ body {
 }
 .container {
     max-width: 100%;
-    margin: 30px auto;
-    padding: 0 15px;
+    margin: 3.0rem auto;
+    padding: 0 1.5rem;
 }
 @media screen and (max-width: 992px) {
     .container {
@@ -36,6 +36,8 @@ body {
 .btn {
     height: 40px;
     line-height: 40px;
+    padding: 0;
+    border: none;
     &.btn-component {
         width: auto;
         border-radius: 0;
@@ -55,7 +57,7 @@ body {
 @media screen and (max-width: 767px) {
     .btn {
         &.btn-component {
-            width: calc(100% - 30px);
+            width: calc(100% - 3.0rem);
         }
     }
 }
@@ -69,17 +71,16 @@ body {
 }
 .table tr th,
 .table tr td {
-  padding: 10px;
+  padding: 1.0rem;
   border-left: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
 }
-
 
 /*title*/
 .sub_content--title {
     padding: 10px;
     border: 1px solid $gray;    
-    margin: 0 0 10px;
+    margin: 0 0 1.0rem;
     font-weight: bold;
 }
 @media screen and (max-width: 767px) {
@@ -87,7 +88,7 @@ body {
         margin: 0;
         border-bottom: none;
         background-color: $gray;
-        padding: 15px 10px;
+        padding: 1.5rem 1.0rem;
     }
 }
 /**
@@ -99,10 +100,10 @@ body {
 }
 
 .c-card-extend {
-    width: calc( 99.9% / 3 - 30px );
+    width: calc( 99.9% / 3 - 3.0rem );
     vertical-align: top;
     display: inline-block;
-    padding: 0 15px 15px;
+    padding: 0 1.5rem 1.5rem;
     &:hover, &:focus {
         figure {
             a, span {
@@ -135,46 +136,32 @@ body {
         }
     }
     .c-post-info-date {
-        font-size: 12px;
         text-transform: uppercase;
         color: $white;
         text-align: left;
         background: $d_gray;
-        padding: 4px 8px;
+        padding: .4rem .8rem;
         display: inline-block;
     }
   }
 }
 .card-title {
     margin-bottom: 0.75rem;
-    padding: 10px 15px 10px;
-    font-size: 1.5rem;
+    padding: 1.0rem 1.5rem;
     margin: 0 auto 2rem;
     text-align: center;
     display: inline-block;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid $d_gray;
     font-weight: bold;
-    .card-subtitle {
-        display: block;
-        font-size: 1.0rem;
-        margin: .5rem 0 0;
-        font-weight: normal;
-    }
 }
 @media screen and (max-width: 767px) {
     .c-card-extend {
         width: calc( 100% / 2 - 10px );
         &:nth-child( 2n - 1 ) {
-            padding: 0 5px 15px;
+            padding: 0 .5rem 1.5rem;
         }
         &:nth-child( 2n - 2 ) {
-            padding: 0 5px 15px;
-        }
-    }
-    .card-title {
-        font-size: 1.2rem;
-        .card-subtitle {
-            font-size: 0.8rem;
+            padding: 0 .5rem 1.5rem;
         }
     }
 }
@@ -192,19 +179,23 @@ button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="subm
     width: 230px;
     display: inline-block;
 }
+.btn {
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
 button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     text-decoration: none;
     background-color: $d_gray;
     color: $white;
     border-radius: 0;
     -webkit-border-radius: 0;
-       -moz-border-radius: 0;
         -ms-border-radius: 0;
     border-color: $d_gray;
+    box-shadow: inset 0 0 0 1px $d_gray;
     &:hover, &:focus {
         color: $d_gray;
         background-color: $white;
-        border-color: $d_gray;
     }
 }
 .btn-back {
@@ -213,10 +204,8 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     color: $d_gray;
     border-radius: 0;
     -webkit-border-radius: 0;
-       -moz-border-radius: 0;
         -ms-border-radius: 0;
-    border-color: $d_gray;
-    opacity: .7;
+    box-shadow:inset 0 0 0 1px $d_gray;
     &:hover, &:focus {
         color: $d_gray;
         opacity: .4;
@@ -224,6 +213,10 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 }
 .form-actions {
     padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 767px) {
   button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="submit"].btn-primary, input[type="submit"].btn-back, span.btn-primary, span.btn-back {
@@ -243,9 +236,6 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 /* lead */
 .lead {
     margin: 0 0 1rem;
-    > * {
-        line-height: 1.6;
-    }
 }
 
 /* error */
@@ -253,16 +243,16 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
   background-color: $l_gray;
   color: $d_gray;
   border: 1px solid $d_gray;
-  margin: 0 0 20px;
-  padding: 10px;
+  margin: 0 0 2.0rem;
+  padding: 1.0rem;
 }
 
 .alert-success {
     background-color: $d_gray;
     color: $l_gray;
     border: 1px solid $l_gray; 
-    margin: 0 0 20px;
-    padding: 10px;
+    margin: 0 0 2.0rem;
+    padding: 1.0rem;
 }
 
 /* search */
@@ -274,7 +264,7 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
   background-color: $l_gray;
   border-top: 1px solid $gray;
   padding: 1rem;
-  margin: 0 15px 1rem;
+  margin: 0 1.5rem 1rem;
   .o-sort-select {
     width: auto;
     margin: 0 1rem 0 0;
@@ -282,14 +272,12 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
       font-size: 0;
       label {
         display: inline-block;
-        font-size: 1rem;
         vertical-align: middle;
         margin: 0 .5rem 0 0;
       }
       select {
         margin: 0;
         width: auto;
-        font-size: 1rem;
         min-width: 150px;
       }
     }
@@ -325,4 +313,7 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 **/
 .txt-center {
     text-align: center;
+}
+.not-found {
+    font-size: 1.4rem;
 }

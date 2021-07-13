@@ -1,8 +1,4 @@
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000;
 
 .footer {
   width: 100%;
@@ -12,8 +8,8 @@ $black: #000000;
     border-bottom: 1px solid $gray;
     background-color: $l_gray;
     border-top: 1px solid $gray;
-    padding: 1em 0;
-    margin: 1em 0 0;
+    padding: 1.5rem 0;
+    margin: 1.5rem 0 0;
     > * {
       width: 90%;
       margin: 0 auto;
@@ -25,7 +21,7 @@ $black: #000000;
       }
       .footer-left {
         p {
-          font-size: 14px;
+          font-size: 1.4rem;
         }
       }
       .footer-right {
@@ -34,7 +30,7 @@ $black: #000000;
           li {
             display: inline-block;
             margin: 0 20px 0 0;
-            font-size: 18px;
+            font-size: 1.8rem;
             a {
               &:hover, &:focus {
                 opacity: .7;
@@ -48,12 +44,12 @@ $black: #000000;
       text-decoration: none;
     }
     h1 {
-      font-size: 28px;
-      margin: 0 auto 10px;
+      font-size: 2.8rem;
+      margin: 0 auto 1.0rem;
     }
     p {
-      line-height: 1.5;
-      font-size: 11px;
+      line-height: 1.6;
+      font-size: 1.1rem;
     }
     .pagetop {
       position: fixed;
@@ -66,10 +62,9 @@ $black: #000000;
       background-size: 17px;
       cursor: pointer;
       -webkit-transition: 0.3s ease;
-      -webkit-transition: 0.5s ease;
-      transition: 0.5s ease;
+              transition: 0.3s ease;
       -webkit-transition-property: top, bottom, opacity;
-      transition-property: top, bottom, opacity;
+              transition-property: top, bottom, opacity;
       overflow: hidden;
       text-indent: -9999px;
       z-index: 995;
