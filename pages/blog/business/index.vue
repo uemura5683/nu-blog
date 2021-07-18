@@ -14,12 +14,12 @@
                     :style="{ 'background-image': 'url(' + business.image.url + ')' }"
                     :alt="business.title">
                 </a>
-                <a
+                <nuxt-link 
                     v-else
-                    v-bind:href="'/blog/business/' + business.id"
+                    :to="'/blog/business/' + business.id"
                     :style="{ 'background-image': 'url(' + business.image.url + ')' }"
                     :alt="business.title">
-                </a>
+                </nuxt-link>
               </figure>
               <p class="c-post-content">
                 <span class="c-post-info-date">{{business.date | moment('LTS')}}</span>
@@ -44,7 +44,7 @@
     },
     filters: {
         moment: function (date) {
-            return moment(date).format('YYYY/MM/DD HH:mm');
+            return moment(date).format('YYYY/MM/DD');
         }
     },
     data() {
